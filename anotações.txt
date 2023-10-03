@@ -1,17 +1,10 @@
-import Aluno from '../models/Aluno'
+  No controllers pode utilizar até 5 metodos, sendo eles: 
+    - Listar os usuários: index -> GET
+    - Cria um novo usuários: store ou create -> POST
+    - Apaga um usuários: delete -> DELETE
+    - Mostra um usuários: show -> GET
+    - Atualizar um usuários: update -> PATCH ou PUT
 
-class HomeController{
-  async index(req, res) {
-    const novoAluno = await Aluno.create({
-      nome: 'Breno',
-      sobrenome: 'Mendes',
-      email: 'b.mendesbernardo2020@gmail.com',
-      idade: 19,
-      peso: 57,
-      altura: 2,
-    })
-    res.json(novoAluno)
-  }
-}
-
-export default new HomeController()
+  Autenticalçao  com JWT
+    A todo momento que o usuário for fazer login primeiro consultará
+    a chave dele
